@@ -3,6 +3,7 @@ import { useI18n, LANGS, type Lang } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 import { profile, projects, stack, experience } from "@/data/portfolio";
 
+
 function Nav() {
   const { t, lang, setLang, dir } = useI18n();
   const { theme, toggle } = useTheme();
@@ -91,6 +92,17 @@ function Hero() {
     <section id="top" className="relative scan-line">
       <div aria-hidden className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8 pt-14 sm:pt-20 pb-12">
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 ltr:right-0 rtl:left-0 h-[600px] w-auto pointer-events-none">
+          <video
+            src="/character-alpha.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-hidden
+            className="h-full w-auto ltr:scale-x-100 rtl:-scale-x-100"
+          />
+        </div>
         <div className="flex items-center gap-3 mb-8 mono text-[11px] uppercase tracking-widest">
           <span className="inline-block size-1.5 rounded-full bg-acid animate-pulse" />
           <span className="text-muted-foreground">{t("hero_status")}</span>
