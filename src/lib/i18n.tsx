@@ -18,6 +18,7 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "Contact",
     hero_status: "Available for senior contracts · Q1 2026",
     hero_role: "Full-stack engineer building scraping, ERP, and AI-agent systems",
+<<<<<<< HEAD
     hero_intro:
       "I design and ship production systems end-to-end — from UML to a VPS handling traffic at 3am. 3 years of Laravel, React, and Python; the last two writing autonomous agents that replace whole workflows.",
     hero_cta_work: "See selected work",
@@ -109,6 +110,7 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "Contact",
     hero_status: "Disponible pour missions seniors · T1 2026",
     hero_role: "Ingénieur full-stack — scraping, ERP, agents IA",
+<<<<<<< HEAD
     hero_intro:
       "Je conçois et livre des systèmes de bout en bout — du modèle UML jusqu'au VPS qui encaisse le trafic à 3h du matin. 3 ans de Laravel, React et Python ; les deux dernières années à écrire des agents autonomes qui remplacent des workflows entiers.",
     hero_cta_work: "Voir les projets",
@@ -201,6 +203,7 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "Contacto",
     hero_status: "Disponible para contratos senior · T1 2026",
     hero_role: "Ingeniero full-stack — scraping, ERP y agentes de IA",
+<<<<<<< HEAD
     hero_intro:
       "Diseño y entrego sistemas de extremo a extremo — desde UML hasta un VPS aguantando tráfico a las 3am. 3 años de Laravel, React y Python; los dos últimos escribiendo agentes autónomos que reemplazan flujos enteros.",
     hero_cta_work: "Ver proyectos",
@@ -293,6 +296,7 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "تواصل",
     hero_status: "متاح لعقود Senior · الربع الأول 2026",
     hero_role: "مهندس Full-Stack — متخصص في Scraping، أنظمة ERP، و AI Agents",
+<<<<<<< HEAD
     hero_intro:
       "أقوم بتصميم وتطوير أنظمة متكاملة من الصفر — من نمذجة UML وحتى خادم VPS يعمل على مدار الساعة. لدي 3 سنوات من الخبرة في Laravel و React و Python؛ ركزت في العامين الأخيرين على بناء وكلاء ذكاء اصطناعي (Agents) يقومون بأتمتة سير العمل بالكامل.",
     hero_cta_work: "شاهد أعمالي",
