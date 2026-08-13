@@ -138,3 +138,15 @@
 @media (prefers-reduced-motion: reduce) {
   .caret, .ticker { animation: none !important; }
 }
+
+.panel-video {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.panel-video[data-loaded] {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .panel-video,
+  .panel-video[data-loaded] { opacity: 1; }
+}
