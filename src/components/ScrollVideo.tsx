@@ -15,22 +15,53 @@ export function ScrollVideo({
   const [small, setSmall] = useState(false);
 
   useEffect(() => {
-    setSmall(window.innerWidth < 640);
+    const updateSize = () => {
+      setSmall(window.innerWidth < 640);
+    };
+
+    updateSize();
     setMode("video");
+
+    window.addEventListener("resize", updateSize);
+
+    return () => {
+      window.removeEventListener("resize", updateSize);
+    };
   }, []);
 
   return (
     <div
       ref={panelRef}
       aria-hidden
-      className="pointer-events-none absolute inset-0 z-[1] overflow-hidden xl:-end-[30%]"
+      className="
+        pointer-events-none
+        absolute
+        inset-0
+        z-[1]
+        overflow-hidden
+        xl:top-[4vh]
+        xl:bottom-0
+        xl:start-[-4%]
+        xl:-end-[24%]
+      "
     >
       {mode === "img" ? (
         <img
           src={POSTER}
           alt=""
           draggable={false}
-          className="h-full w-full select-none object-cover"
+          className="
+            video-bottom-fade
+            video-fade-x
+            h-full
+            w-full
+            select-none
+            object-cover
+            object-center
+            xl:object-contain
+            xl:object-bottom
+          "
+          data-fade
         />
       ) : (
         <video
@@ -41,12 +72,26 @@ export function ScrollVideo({
           loop={false}
           preload="auto"
           aria-hidden
-          onLoadedData={(e) => e.currentTarget.setAttribute("data-loaded", "1")}
+          onLoadedData={(e) => {
+            e.currentTarget.setAttribute("data-loaded", "1");
+          }}
           onError={(e) => {
             e.currentTarget.removeAttribute("data-loaded");
             setMode("img");
           }}
-          className="panel-video h-full w-full select-none object-cover"
+          className="
+            panel-video
+            video-bottom-fade
+            video-fade-x
+            h-full
+            w-full
+            select-none
+            object-cover
+            object-center
+            xl:object-contain
+            xl:object-bottom
+          "
+          data-fade
         />
       )}
     </div>

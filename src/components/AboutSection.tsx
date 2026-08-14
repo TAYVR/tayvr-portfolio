@@ -30,9 +30,9 @@ function Scene({
     <div
       ref={(el) => register(id, el)}
       data-scene={id}
-      className="pointer-events-none absolute inset-0 flex w-full items-end justify-center px-4 pb-[9vh] sm:px-6 sm:pb-[11vh] xl:items-center xl:justify-start xl:px-0 xl:pb-0 xl:pe-[2vw] xl:ps-[6vw]"
+      className="pointer-events-none absolute inset-0 flex w-full items-end justify-center px-4 pb-[6vh] sm:px-6 sm:pb-[8vh] xl:items-center xl:justify-start xl:px-0 xl:pb-0 xl:pe-[2vw] xl:ps-[6vw]"
     >
-      <div className="w-full max-w-2xl rounded-xl border border-line bg-background/85 p-5 backdrop-blur-md sm:max-w-3xl sm:p-6 xl:max-w-md xl:rounded-none xl:border-0 xl:bg-transparent xl:backdrop-blur-none xl:p-0 2xl:max-w-lg">
+      <div className="w-full max-w-2xl rounded-xl border border-line bg-background/85 p-5 backdrop-blur-md sm:max-w-3xl sm:p-6 xl:max-w-lg xl:rounded-none xl:border-0 xl:bg-transparent xl:backdrop-blur-none xl:p-0 2xl:max-w-xl">
         {children}
       </div>
     </div>
@@ -113,7 +113,7 @@ function StoryScene() {
         >
           01
         </span>
-        <p className="relative text-lg leading-relaxed xl:text-xl">{t("about_body")}</p>
+        <p className="relative  leading-relaxed ">{t("about_body")}</p>
         <div className="relative mt-5 border-s-2 border-primary ps-4 mono text-[11px] leading-6 text-muted-foreground">
           <span className="text-primary">//</span> {t("about_learning")}
         </div>
@@ -157,7 +157,7 @@ function SkillsScene({
               group={g}
               index={i}
               registerCard={registerCard}
-              className="w-[78%] shrink-0 will-change-transform sm:w-[64%] md:w-[56%] xl:w-[62%]"
+              className="w-[85%] shrink-0 will-change-transform sm:w-[72%] md:w-[62%] xl:w-[70%]"
             />
           ))}
         </div>
@@ -193,7 +193,7 @@ function FinalScene() {
         >
           03
         </span>
-        <h3 className="relative text-2xl font-bold leading-tight tracking-tight xl:text-3xl">
+        <h3 className="relative text-xl font-bold leading-tight tracking-tight xl:text-xl">
           {t("about_statement")}
         </h3>
         <ul className="relative mt-4 flex flex-wrap gap-x-6 gap-y-2">

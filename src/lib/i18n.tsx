@@ -18,7 +18,6 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "Contact",
     hero_status: "Available for senior contracts · Q1 2026",
     hero_role: "Full-stack engineer building scraping, ERP, and AI-agent systems",
-<<<<<<< HEAD
     hero_intro:
       "I design and ship production systems end-to-end — from UML to a VPS handling traffic at 3am. 3 years of Laravel, React, and Python; the last two writing autonomous agents that replace whole workflows.",
     hero_cta_work: "See selected work",
@@ -30,17 +29,17 @@ const dicts: Record<Lang, Dict> = {
     section_about: "About",
     about_kicker: "// who",
     about_body:
-      "Based in Kénitra, Morocco. I work where business logic gets messy: religious-travel ERPs, real-time gaming-currency marketplaces, multi-portal school systems. My favorite problems are the ones that need scraping at scale on Monday and a clean admin UI by Friday.",
+      "Full-stack developer with 3+ years of experience building SaaS, ERP and e-commerce applications using Laravel, React, Next.js and MySQL. Experienced in REST APIs, cloud deployment, AI integrations and workflow automation. Based in Kénitra, Morocco.",
     about_focus: "Currently focused on:",
-    about_f1: "AI agents that own a workflow, not just a prompt",
-    about_f2: "Industrial-grade scraping with Playwright + queues",
-    about_f3: "ERPs that survive five years of feature drift",
+    about_f1: "Workflow automation with custom AI agents",
+    about_f2: "Web scraping pipelines with Python + Playwright",
+    about_f3: "ERP systems built to stay maintainable over time",
     about_learning:
       "Currently learning Java + Spring Boot — beginner, building toward backend interop with JVM-heavy enterprise stacks.",
     about_scroll: "scroll",
     about_k_skills: "// core stack",
     about_statement:
-      "Build systems that survive five years of feature drift — release after release, end to end.",
+      "I build systems that stay reliable release after release — end to end.",
     g_frontend: "Frontend",
     g_backend: "Backend & languages",
     g_data: "Data",
@@ -110,7 +109,6 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "Contact",
     hero_status: "Disponible pour missions seniors · T1 2026",
     hero_role: "Ingénieur full-stack — scraping, ERP, agents IA",
-<<<<<<< HEAD
     hero_intro:
       "Je conçois et livre des systèmes de bout en bout — du modèle UML jusqu'au VPS qui encaisse le trafic à 3h du matin. 3 ans de Laravel, React et Python ; les deux dernières années à écrire des agents autonomes qui remplacent des workflows entiers.",
     hero_cta_work: "Voir les projets",
@@ -122,17 +120,17 @@ const dicts: Record<Lang, Dict> = {
     section_about: "À propos",
     about_kicker: "// qui",
     about_body:
-      "Basé à Kénitra, Maroc. J'interviens là où la logique métier devient dense : ERP pour agences Hajj & Omra, marketplaces temps réel, systèmes scolaires multi-portails. Mes problèmes préférés combinent du scraping à grande échelle le lundi et une interface admin propre le vendredi.",
+      "Développeur full-stack avec plus de 3 ans d'expérience dans la construction d'applications SaaS, ERP et e-commerce avec Laravel, React, Next.js et MySQL. Expérimenté en API REST, déploiement cloud, intégrations IA et automatisation. Basé à Kénitra, Maroc.",
     about_focus: "En ce moment :",
-    about_f1: "Agents IA qui possèdent un workflow, pas juste un prompt",
-    about_f2: "Scraping industriel avec Playwright + files de messages",
-    about_f3: "ERP qui tiennent cinq ans de dérive fonctionnelle",
+    about_f1: "Automatisation de workflows avec des agents IA sur mesure",
+    about_f2: "Pipelines de scraping web avec Python + Playwright",
+    about_f3: "ERP conçus pour rester maintenables sur la durée",
     about_learning:
       "Actuellement en apprentissage : Java + Spring Boot — débutant, en vue d'interop backend avec des stacks JVM en entreprise.",
     about_scroll: "défiler",
     about_k_skills: "// stack essentielle",
     about_statement:
-      "Construire des systèmes qui survivent à la dérive fonctionnelle — version après version, de bout en bout.",
+      "Je construis des systèmes fiables version après version — de bout en bout.",
     g_frontend: "Frontend",
     g_backend: "Backend & langages",
     g_data: "Données",
@@ -203,7 +201,6 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "Contacto",
     hero_status: "Disponible para contratos senior · T1 2026",
     hero_role: "Ingeniero full-stack — scraping, ERP y agentes de IA",
-<<<<<<< HEAD
     hero_intro:
       "Diseño y entrego sistemas de extremo a extremo — desde UML hasta un VPS aguantando tráfico a las 3am. 3 años de Laravel, React y Python; los dos últimos escribiendo agentes autónomos que reemplazan flujos enteros.",
     hero_cta_work: "Ver proyectos",
@@ -215,17 +212,17 @@ const dicts: Record<Lang, Dict> = {
     section_about: "Sobre mí",
     about_kicker: "// quién",
     about_body:
-      "Con base en Kénitra, Marruecos. Trabajo donde la lógica de negocio se complica: ERPs para viajes religiosos, mercados de divisas virtuales en tiempo real, sistemas escolares multi-portal. Mis problemas favoritos requieren scraping a escala el lunes y un panel admin limpio el viernes.",
+      "Desarrollador full-stack con más de 3 años de experiencia construyendo aplicaciones SaaS, ERP y e-commerce con Laravel, React, Next.js y MySQL. Experiencia en APIs REST, despliegue en la nube, integraciones de IA y automatización. Con base en Kénitra, Marruecos.",
     about_focus: "Actualmente enfocado en:",
-    about_f1: "Agentes de IA que poseen un flujo completo, no solo un prompt",
-    about_f2: "Scraping industrial con Playwright + colas",
-    about_f3: "ERPs que sobreviven cinco años de cambios",
+    about_f1: "Automatización de flujos con agentes de IA a medida",
+    about_f2: "Pipelines de scraping web con Python + Playwright",
+    about_f3: "ERPs diseñados para mantenerse a largo plazo",
     about_learning:
       "Aprendiendo Java + Spring Boot — principiante, apuntando a interoperar con stacks JVM empresariales.",
     about_scroll: "desplazar",
     about_k_skills: "// stack principal",
     about_statement:
-      "Crear sistemas que sobrevivan a los cambios — versión tras versión, de principio a fin.",
+      "Construyo sistemas fiables versión tras versión — de principio a fin.",
     g_frontend: "Frontend",
     g_backend: "Backend y lenguajes",
     g_data: "Datos",
@@ -296,7 +293,6 @@ const dicts: Record<Lang, Dict> = {
     nav_contact: "تواصل",
     hero_status: "متاح لعقود Senior · الربع الأول 2026",
     hero_role: "مهندس Full-Stack — متخصص في Scraping، أنظمة ERP، و AI Agents",
-<<<<<<< HEAD
     hero_intro:
       "أقوم بتصميم وتطوير أنظمة متكاملة من الصفر — من نمذجة UML وحتى خادم VPS يعمل على مدار الساعة. لدي 3 سنوات من الخبرة في Laravel و React و Python؛ ركزت في العامين الأخيرين على بناء وكلاء ذكاء اصطناعي (Agents) يقومون بأتمتة سير العمل بالكامل.",
     hero_cta_work: "شاهد أعمالي",
@@ -308,16 +304,16 @@ const dicts: Record<Lang, Dict> = {
     section_about: "من أنا",
     about_kicker: "// من",
     about_body:
-      "أعمل من مدينة القنيطرة بالمغرب. أتخصص في المشاريع ذات المنطق البرمجي المعقد: مثل أنظمة ERP للحج والعمرة، وأسواق العملات الرقمية في الألعاب، والأنظمة المدرسية. أفضل التحديات هي التي تتطلب Scraping ضخم يوم الاثنين، ولوحة تحكم احترافية بحلول الجمعة.",
+      "مطور Full-Stack بخبرة تتجاوز 3 سنوات في بناء تطبيقات SaaS وأنظمة ERP والتجارة الإلكترونية باستخدام Laravel و React و Next.js و MySQL. لدي خبرة في REST APIs والنشر السحابي وتكاملات الذكاء الاصطناعي وأتمتة سير العمل. أعمل من مدينة القنيطرة بالمغرب.",
     about_focus: "مركز حالياً على:",
-    about_f1: "وكلاء ذكاء اصطناعي يديرون سير عمل كاملاً، وليس مجرد دردشة",
-    about_f2: "كشط بيانات (Scraping) احترافي باستخدام Playwright",
-    about_f3: "أنظمة ERP قوية تصمد أمام التغييرات لسنوات",
+    about_f1: "أتمتة سير العمل بوكلاء ذكاء اصطناعي مخصصين",
+    about_f2: "خطوط كشط بيانات (Scraping) باستخدام Python و Playwright",
+    about_f3: "أنظمة ERP مصممة لتظل قابلة للصيانة على المدى الطويل",
     about_learning:
       "أتعلم حالياً: Java + Spring Boot — أطور مهاراتي للعمل على مشاريع برمجية كبرى لمستوى الشركات (Enterprise).",
     about_scroll: "مرّر",
     about_k_skills: "// التقنيات",
-    about_statement: "أبني أنظمة صامدة أمام التغييرات — إصداراً بعد إصدار، من البداية إلى النهاية.",
+    about_statement: "أبني أنظمة موثوقة إصداراً بعد إصدار — من البداية إلى النهاية.",
     g_frontend: "الواجهة (Frontend)",
     g_backend: "الخادم (Backend)",
     g_data: "البيانات",

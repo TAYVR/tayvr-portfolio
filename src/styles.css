@@ -35,7 +35,7 @@
 }
 
 :root {
-  --background: oklch(0.97 0.008 90);
+  --background: #f9f9fb;
   --foreground: oklch(0.18 0.01 270);
   --card: oklch(0.99 0.005 90);
   --card-foreground: oklch(0.18 0.01 270);
@@ -149,4 +149,52 @@
 @media (prefers-reduced-motion: reduce) {
   .panel-video,
   .panel-video[data-loaded] { opacity: 1; }
+}
+
+.video-fade-x {
+  /* mobile: no side mask — full-size clean video */
+}
+
+@media (min-width: 80rem) {
+  .video-fade-x {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 10%,
+      rgba(0, 0, 0, 0.15) 16%,
+      rgba(0, 0, 0, 0.55) 22%,
+      black 30%,
+      black 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 10%,
+      rgba(0, 0, 0, 0.15) 16%,
+      rgba(0, 0, 0, 0.55) 22%,
+      black 30%,
+      black 100%
+    );
+  }
+}
+
+.video-bottom-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 72%,
+    rgba(0, 0, 0, 0.9) 80%,
+    rgba(0, 0, 0, 0.55) 88%,
+    rgba(0, 0, 0, 0.2) 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 72%,
+    rgba(0, 0, 0, 0.9) 80%,
+    rgba(0, 0, 0, 0.55) 88%,
+    rgba(0, 0, 0, 0.2) 95%,
+    transparent 100%
+  );
 }
