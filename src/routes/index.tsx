@@ -2,14 +2,23 @@ import { createFileRoute } from "@tanstack/react-router";
 import { I18nProvider } from "@/lib/i18n";
 import { ThemeProvider } from "@/lib/theme";
 import Portfolio from "@/components/Portfolio";
+import { Preloader } from "@/components/Preloader";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Elmahdi Tayar — Full-Stack Engineer · Scraping & AI Agents" },
-      { name: "description", content: "Full-stack engineer based in Morocco. Laravel, React, Python, AI agents, industrial scraping, ERP systems." },
+      {
+        name: "description",
+        content:
+          "Full-stack engineer based in Morocco. Laravel, React, Python, AI agents, industrial scraping, ERP systems.",
+      },
       { property: "og:title", content: "Elmahdi Tayar — TAYVR" },
-      { property: "og:description", content: "Full-stack engineer building scraping pipelines, ERP systems, and AI-agent workflows." },
+      {
+        property: "og:description",
+        content:
+          "Full-stack engineer building scraping pipelines, ERP systems, and AI-agent workflows.",
+      },
     ],
   }),
   component: Index,
@@ -20,6 +29,7 @@ function Index() {
     <ThemeProvider>
       <I18nProvider>
         <Portfolio />
+        <Preloader />
       </I18nProvider>
     </ThemeProvider>
   );
