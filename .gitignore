@@ -34,3 +34,4 @@ dist-ssr
 
 # Project specific
 .workspace/
+.vercel/
