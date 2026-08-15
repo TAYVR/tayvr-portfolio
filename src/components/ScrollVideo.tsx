@@ -1,4 +1,4 @@
-import { useEffect, useState, type RefObject } from "react";
+import { useEffect, useRef, useState, type RefObject } from "react";
 
 const SRC = "/video-project.mp4";
 const SRC_SMALL = "/video-project-small.mp4";
@@ -13,14 +13,19 @@ export function ScrollVideo({
 }) {
   const [mode, setMode] = useState<"idle" | "video" | "img">("idle");
   const [small, setSmall] = useState(false);
+  const smallRef = useRef(false);
 
   useEffect(() => {
     const updateSize = () => {
-      setSmall(window.innerWidth < 640);
+      const next = window.innerWidth < 640;
+      if (next === smallRef.current) return;
+      smallRef.current = next;
+      setSmall(next);
+      setMode("idle");
+      videoRef.current?.removeAttribute("data-loaded");
     };
 
     updateSize();
-    setMode("video");
 
     window.addEventListener("resize", updateSize);
 
@@ -64,35 +69,57 @@ export function ScrollVideo({
           data-fade
         />
       ) : (
-        <video
-          ref={videoRef}
-          src={small ? SRC_SMALL : SRC}
-          muted
-          playsInline
-          loop={false}
-          preload="auto"
-          aria-hidden
-          onLoadedData={(e) => {
-            e.currentTarget.setAttribute("data-loaded", "1");
-          }}
-          onError={(e) => {
-            e.currentTarget.removeAttribute("data-loaded");
-            setMode("img");
-          }}
-          className="
-            panel-video
-            video-bottom-fade
-            video-fade-x
-            h-full
-            w-full
-            select-none
-            object-cover
-            object-center
-            xl:object-contain
-            xl:object-bottom
-          "
-          data-fade
-        />
+        <>
+          <video
+            ref={videoRef}
+            src={small ? SRC_SMALL : SRC}
+            muted
+            playsInline
+            loop={false}
+            preload="auto"
+            aria-hidden
+            onLoadedData={(e) => {
+              e.currentTarget.setAttribute("data-loaded", "1");
+              setMode("video");
+            }}
+            onError={(e) => {
+              e.currentTarget.removeAttribute("data-loaded");
+              setMode("img");
+            }}
+            className="
+              panel-video
+              video-bottom-fade
+              video-fade-x
+              h-full
+              w-full
+              select-none
+              object-cover
+              object-center
+              xl:object-contain
+              xl:object-bottom
+            "
+            data-fade
+          />
+          {mode === "idle" && (
+            <img
+              src={POSTER}
+              alt=""
+              draggable={false}
+              className="
+                video-bottom-fade
+                video-fade-x
+                h-full
+                w-full
+                select-none
+                object-cover
+                object-center
+                xl:object-contain
+                xl:object-bottom
+              "
+              data-fade
+            />
+          )}
+        </>
       )}
     </div>
   );

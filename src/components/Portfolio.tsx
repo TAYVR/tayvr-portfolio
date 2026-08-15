@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useI18n, LANGS, type Lang } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 import { profile, projects, experience } from "@/data/portfolio";
@@ -119,12 +119,34 @@ function Ticker() {
 
 function Hero() {
   const { t } = useI18n();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const resume = () => {
+      const video = videoRef.current;
+      if (!video || document.visibilityState !== "visible") return;
+      if (video.paused) {
+        const p = video.play();
+        if (p) p.catch(() => {});
+      }
+    };
+
+    document.addEventListener("visibilitychange", resume);
+    window.addEventListener("pageshow", resume);
+
+    return () => {
+      document.removeEventListener("visibilitychange", resume);
+      window.removeEventListener("pageshow", resume);
+    };
+  }, []);
+
   return (
     <section id="top" className="relative scan-line">
       <div aria-hidden className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8 pt-14 sm:pt-20 pb-12">
         <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 ltr:right-0 rtl:left-0 h-[600px] w-auto pointer-events-none">
           <video
+            ref={videoRef}
             src="/character-alpha.webm"
             autoPlay
             loop

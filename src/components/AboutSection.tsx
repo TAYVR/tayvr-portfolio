@@ -405,16 +405,51 @@ function Cinematic() {
       update();
     };
 
+    const resync = () => {
+      measure();
+      update();
+    };
+
+    const onVisible = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = 0;
+      const v = videoRef.current;
+      if (v && v.readyState < 2) negRateChecked = false;
+      measure();
+      update();
+    };
+    const onVisibility = () => {
+      if (document.visibilityState === "visible") onVisible();
+    };
+
+    const v = videoRef.current;
+    if (v) {
+      v.addEventListener("loadeddata", resync);
+      v.addEventListener("canplay", resync);
+      v.addEventListener("playing", resync);
+      v.addEventListener("waiting", resync);
+      v.addEventListener("stalled", resync);
+    }
+
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onResize);
-    document.addEventListener("visibilitychange", onResize);
+    window.addEventListener("pageshow", onVisible);
+    document.addEventListener("visibilitychange", onVisibility);
     if (document.fonts?.ready) document.fonts.ready.then(() => onResize());
 
     return () => {
       if (rafId) cancelAnimationFrame(rafId);
+      if (v) {
+        v.removeEventListener("loadeddata", resync);
+        v.removeEventListener("canplay", resync);
+        v.removeEventListener("playing", resync);
+        v.removeEventListener("waiting", resync);
+        v.removeEventListener("stalled", resync);
+      }
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
-      document.removeEventListener("visibilitychange", onResize);
+      window.removeEventListener("pageshow", onVisible);
+      document.removeEventListener("visibilitychange", onVisibility);
       ticking = false;
     };
   }, [lang]);
